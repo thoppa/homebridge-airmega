@@ -1,5 +1,5 @@
 {
-	"name": "homebridge-airmega",
+	"name": "homebridge-airmega-shamanskyh",
 	"version": "3.1.10",
 	"description": "Homebridge plugin for the Airmega air purifier",
 	"main": "./dist/index.js",
