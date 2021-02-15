@@ -26,7 +26,7 @@ export class FilterService extends AbstractService {
     let filterService = this.accessory.getServiceByUUIDAndSubType(HAP.Service.FilterMaintenance, 'main');
 
     if (!filterService) {
-      filterService = this.accessory.addService(HAP.Service.FilterMaintenance, Config.Filters.MAIN_FILTER, 'main');
+        filterService = this.accessory.addService(HAP.Service.FilterMaintenance, this.purifier.name + ' Max2-filter', Config.Filters.MAIN_FILTER);
     }
 
     return filterService;
@@ -36,7 +36,7 @@ export class FilterService extends AbstractService {
     let filterService = this.accessory.getServiceByUUIDAndSubType(HAP.Service.FilterMaintenance, 'pre');
 
     if (!filterService) {
-      filterService = this.accessory.addService(HAP.Service.FilterMaintenance, Config.Filters.PRE_FILTER, 'pre');
+        filterService = this.accessory.addService(HAP.Service.FilterMaintenance, this.purifier.name +' Pre-filter', Config.Filters.PRE_FILTER);
     }
 
     return filterService;
